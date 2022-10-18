@@ -4,13 +4,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     info.startCountdown(15)
 })
 let pizza: Sprite = null
-scene.setBackgroundColor(0)
+scene.setBackgroundColor(6)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
+    . . . . . . . 2 . b 2 5 b . . . 
+    . . . . . . 2 2 b b 2 2 . . . . 
+    . . . . . b 2 2 5 5 2 2 b . . . 
     . b b b b b 5 5 5 5 5 5 5 b . . 
     . b d 5 b 5 5 5 5 5 5 5 5 b . . 
     . . b 5 5 b 5 d 1 f 5 d e f . . 
@@ -25,20 +25,20 @@ let mySprite = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(mySprite)
 pizza = sprites.create(img`
-    . . . . . . b b b b . . . . . . 
-    . . . . . . b 4 4 4 b . . . . . 
-    . . . . . . b b 4 4 4 b . . . . 
-    . . . . . b 4 b b b 4 4 b . . . 
-    . . . . b d 5 5 5 4 b 4 4 b . . 
-    . . . . b 3 3 3 5 5 4 e 4 4 b . 
-    . . . b d 3 3 3 5 7 5 4 e 4 4 e 
-    . . . b 5 3 3 3 5 5 5 5 e e e e 
-    . . b d 7 5 5 5 3 3 3 5 5 e e e 
-    . . b 5 5 5 5 5 3 3 3 5 5 d e e 
-    . b 3 3 3 5 7 5 3 3 3 5 d d e 4 
-    . b 3 3 3 5 5 5 5 5 5 d d e 4 . 
-    b d 3 3 d 5 5 5 d d d 4 4 . . . 
-    b 5 5 5 5 d d 4 4 4 4 . . . . . 
-    4 d d d 4 4 4 . . . . . . . . . 
-    4 4 4 4 . . . . . . . . . . . . 
+    . . . . . . . 6 . . . . . . . . 
+    . . . . . . 8 6 6 . . . 6 8 . . 
+    . . . e e e 8 8 6 6 . 6 7 8 . . 
+    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
+    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
+    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
+    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
+    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
+    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
+    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
+    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
+    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
+    e e 2 e 2 2 4 2 2 e e e c . . . 
+    e e e e 2 e 2 2 e e e c . . . . 
+    e e e 2 e e c e c c c . . . . . 
+    . c c c c c c c . . . . . . . . 
     `, SpriteKind.Food)
